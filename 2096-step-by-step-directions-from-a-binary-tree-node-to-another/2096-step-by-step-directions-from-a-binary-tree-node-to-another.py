@@ -6,8 +6,7 @@
 #         self.right = right
 class Solution:
     def getDirections(self, root: Optional[TreeNode], startValue: int, destValue: int) -> str:
-        
-        graph = defaultdict(list)
+        graph = collections.defaultdict(list)
         queue = collections.deque([root])
         
         while queue:
@@ -25,7 +24,6 @@ class Solution:
                 
                 queue.append(node.right)
                 
-        
         seen = set()
         queue = collections.deque([(startValue, "")])
         
@@ -44,4 +42,4 @@ class Solution:
                 
                 for child, direction in graph[cur_val]:
                     if child not in seen:
-                        queue.append((child, cur_path + direction))
+                        queue.append((child, cur_path+direction))

@@ -6,8 +6,9 @@
 #         self.right = right
 class Solution:
     def getDirections(self, root: Optional[TreeNode], startValue: int, destValue: int) -> str:
-        graph = collections.defaultdict(list)
         queue = collections.deque([root])
+        
+        graph = collections.defaultdict(list)
         
         while queue:
             node = queue.popleft()
@@ -24,8 +25,8 @@ class Solution:
                 
                 queue.append(node.right)
                 
-        seen = set()
         queue = collections.deque([(startValue, "")])
+        seen = set()
         
         while queue:
             cur_val, cur_path = queue.popleft()

@@ -10,10 +10,8 @@ class Solution:
         res = defaultdict(list)
         
         def dfs(node, layer):
-            
             if not node:
                 return layer
-            
             
             left = dfs(node.left, layer)
             right = dfs(node.right, layer)
@@ -21,8 +19,7 @@ class Solution:
             layer = max(left, right)
             
             res[layer].append(node.val)
-            
-            return layer+1
+            return layer +1
         
         dfs(root, 0)
         

@@ -7,13 +7,13 @@ class Solution:
             lookup[c].append(i)
             
         def bs(lst, i):
-
             l = 0
             r = len(lst)
             
-            while l<r:
+            while l < r:
                 
                 mid = (l+r)//2
+                
                 if i < lst[mid]:
                     r = mid
                 else:

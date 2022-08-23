@@ -1,9 +1,9 @@
 class Solution:
     def numMatchingSubseq(self, s: str, words: List[str]) -> int:
-        lookup = defaultdict(list)
+        lookup = collections.defaultdict(list)
         output = 0
         
-        for i,c in enumerate(s):
+        for i, c in enumerate(s):
             lookup[c].append(i)
         
         def bs(lst, i):

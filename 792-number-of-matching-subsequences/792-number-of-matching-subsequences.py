@@ -11,13 +11,12 @@ class Solution:
             r = len(lst)
             
             while l < r:
-                
                 mid = (l+r)//2
                 
                 if i < lst[mid]:
                     r = mid
                 else:
-                    l = mid + 1
+                    l = mid+1
             return l
         
         for w in words:

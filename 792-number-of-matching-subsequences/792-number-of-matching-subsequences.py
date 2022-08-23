@@ -5,7 +5,7 @@ class Solution:
         
         for i,c in enumerate(s):
             lookup[c].append(i)
-        
+            
         
         def bs(lst, i):
             l = 0

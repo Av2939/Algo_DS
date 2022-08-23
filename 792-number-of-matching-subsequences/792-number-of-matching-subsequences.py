@@ -6,9 +6,11 @@ class Solution:
         for i,c in enumerate(s):
             lookup[c].append(i)
         
-        def bs(lst,i):
+        
+        def bs(lst, i):
             l = 0
             r = len(lst)
+        
             
             while l<r:
                 mid = (l+r)//2

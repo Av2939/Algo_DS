@@ -3,7 +3,7 @@ class Solution:
         lookup = defaultdict(list)
         output = 0
         
-        for i, c in enumerate(s):
+        for i,c in enumerate(s):
             lookup[c].append(i)
         
         def bs(lst, i):

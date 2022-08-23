@@ -3,12 +3,13 @@ class Solution:
         modified = list(s)
         
         for index, source, target in zip(indices, sources, targets):
+            
             if not s[index:].startswith(source):
                 continue
             else:
                 modified[index] = target
                 
-                for i in range(index+1, len(source) + index):
+                for i in range(index + 1, len(source)+index):
                     modified[i] = ""
-        
+                    
         return "".join(modified)

@@ -16,7 +16,7 @@ class DetectSquares:
         for x,y in self.pts:
             if (abs(px-x)!= abs(py-y)) or px == x or py ==y:
                 continue
-            res += self.ptsCounter[(px, y)] * self.ptsCounter[(x,py)]
+            res += self.ptsCounter[(x, py)] * self.ptsCounter[(px,y)]
         return res
 
 

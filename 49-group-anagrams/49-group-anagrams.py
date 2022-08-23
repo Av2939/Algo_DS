@@ -5,5 +5,5 @@ class Solution:
         
         for s in strs:
             Dict[str(sorted(s))].append(s)
-            
+        
         return Dict.values()

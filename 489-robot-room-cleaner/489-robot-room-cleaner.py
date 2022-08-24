@@ -45,8 +45,8 @@ class Solution:
             robot.turnRight()
             robot.turnRight()
             
+        
         def backtrack(cell = (0,0), d = 0):
-            
             visited.add(cell)
             robot.clean()
             
@@ -57,12 +57,9 @@ class Solution:
                 if new_cell not in visited and robot.move():
                     backtrack(new_cell, new_d)
                     go_back()
-                    
                 robot.turnRight()
                 
-        directions = [(-1,0), (0,1), (1,0), (0,-1)]
+        
+        directions = [(-1, 0), (0,1), (1,0), (0, -1)]
         visited = set()
-        
         backtrack()
-        
-                    

@@ -8,8 +8,8 @@ class Solution:
                 length = 0
                 
                 while (n+length) in numSet:
-                    length +=1
-                    
+                    length += 1
+                
                 longest = max(longest, length)
-        
+                
         return longest

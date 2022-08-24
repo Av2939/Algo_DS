@@ -1,14 +1,12 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        hashSet = {}
+        Dict = {}
         
         for i in range(len(nums)):
             
             val = target - nums[i]
             
-            if val in hashSet:
-                return [hashSet[val], i]
+            if val in Dict:
+                return [Dict[val], i]
             
-            hashSet[nums[i]] = i
-            
-            
+            Dict[nums[i]] = i

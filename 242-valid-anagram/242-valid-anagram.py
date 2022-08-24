@@ -14,8 +14,7 @@ class Solution:
         
         for val in s:
             
-            if sCount[val] != tCount.get(val, 0):
+            if sCount[val] != tCount.get(val):
                 return False
-            
         return True
             

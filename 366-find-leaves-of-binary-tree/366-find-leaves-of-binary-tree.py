@@ -7,9 +7,10 @@
 class Solution:
     def findLeaves(self, root: Optional[TreeNode]) -> List[List[int]]:
         
-        res = defaultdict(list)
+        res = collections.defaultdict(list)
         
         def dfs(node, layer):
+            
             if not node:
                 return layer
             
@@ -19,8 +20,12 @@ class Solution:
             layer = max(left, right)
             
             res[layer].append(node.val)
-            return layer +1
+            
+            return layer + 1
+        
+        
         
         dfs(root, 0)
         
         return res.values()
+            

@@ -1,18 +1,15 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        res = ""
+        
+        string = ""
         
         for c in s:
             
             if c.isalnum():
-                res += c
-        s_lower = res.lower()
+                string+= c
         
-        if s_lower != s_lower[::-1]:
+        low_s = string.lower()
+        
+        if low_s != low_s[::-1]:
             return False
-        
         return True
-    
-    #This technically takes up more space then using two pointers.
-    #But it's a lot more cleaner
-        

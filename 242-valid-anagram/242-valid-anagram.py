@@ -4,6 +4,7 @@ class Solution:
         if len(s) != len(t):
             return False
         
+        
         sCount = {}
         tCount = {}
         
@@ -13,8 +14,9 @@ class Solution:
             
         
         for val in s:
-            
-            if sCount[val] != tCount.get(val):
+            if sCount[val] != tCount.get(val, 0):
                 return False
+        
+        
         return True
             

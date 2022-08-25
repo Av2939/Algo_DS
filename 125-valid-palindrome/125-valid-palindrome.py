@@ -12,4 +12,7 @@ class Solution:
             return False
         
         return True
+    
+    #This technically takes up more space then using two pointers.
+    #But it's a lot more cleaner
         

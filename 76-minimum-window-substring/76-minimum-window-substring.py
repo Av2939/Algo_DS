@@ -7,9 +7,9 @@ class Solution:
         countT = {}
         window = {}
         
-        
         for c in t:
             countT[c] = 1 + countT.get(c, 0)
+            
             
         have, need = 0, len(countT)
         res, resLen = [-1, -1], float("infinity")

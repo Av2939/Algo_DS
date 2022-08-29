@@ -9,11 +9,9 @@ class Solution:
         
         for c in t:
             countT[c] = 1 + countT.get(c, 0)
-        
-       
-        
+            
         have, need = 0, len(countT)
-        resLen, res =float("infinity"), [-1,-1]
+        res, resLen = [-1,-1], float("infinity")
         l = 0
         
         for r in range(len(s)):

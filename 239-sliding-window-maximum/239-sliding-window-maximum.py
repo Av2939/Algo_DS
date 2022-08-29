@@ -4,20 +4,22 @@ class Solution:
         valQ = deque()
         res = []
         
+        
         for i, n in enumerate(nums):
             
             while valQ and valQ[-1] < n:
                 indexQ.pop()
                 valQ.pop()
                 
-            
             indexQ.append(i)
             valQ.append(n)
             
-            while i- indexQ[0] + 1 > k:
+            
+            while i - indexQ[0] + 1 > k:
                 indexQ.popleft()
                 valQ.popleft()
-                
+
             if i + 1 >= k:
                 res.append(valQ[0])
+        
         return res

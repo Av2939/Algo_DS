@@ -3,15 +3,15 @@ class Solution:
         numSet = set(nums)
         longest = 0
         
-        for i in range(len(nums)):
+        for n in nums:
             
-            if (nums[i] -1) not in numSet:
+            if (n-1) not in numSet:
                 length = 1
                 
-                while (nums[i]+ length) in numSet:
+                while (n + length) in numSet:
                     length += 1
                     
-                longest = max(length, longest)
+                longest = max(longest, length)
                 
         return longest
-        
+                

@@ -13,8 +13,8 @@ class Solution:
             
         
         
-        for val in sCount:
-            if sCount[val] != tCount.get(val, 0):
+        for c in s:
+            if sCount[c] != tCount.get(c, 0):
                 return False
         return True
         

@@ -5,10 +5,9 @@ class Solution:
         count = {}
         
         for i, x in enumerate(nums):
-            
             if x not in left:
                 left[x] = i
-            
+                
             right[x] = i
             count[x] = 1 + count.get(x, 0)
             
@@ -17,7 +16,7 @@ class Solution:
         
         for x in count:
             
-            if degree == count[x]:
+            if count[x] == degree:
                 ans = min(ans, right[x] - left[x] + 1)
+        
         return ans
-                

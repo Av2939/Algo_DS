@@ -5,11 +5,13 @@ class Solution:
         count = {}
         
         for i, x in enumerate(nums):
+            
             if x not in left:
                 left[x] = i
                 
             right[x] = i
             count[x] = 1 + count.get(x, 0)
+
             
         ans = len(nums)
         degree = max(count.values())
@@ -18,5 +20,4 @@ class Solution:
             
             if count[x] == degree:
                 ans = min(ans, right[x] - left[x] + 1)
-        
         return ans

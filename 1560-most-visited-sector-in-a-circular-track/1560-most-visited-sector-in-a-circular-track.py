@@ -11,8 +11,7 @@ class Solution:
             res = []
             
             for i in range(n):
-                
-                if i+1 <= last or i+1 >= first:
+                if i + 1 <= last or i + 1 >= first:
                     res.append(i+1)
                     
             return sorted(res)

@@ -3,11 +3,12 @@ class Solution:
         first = rounds[0]
         last = rounds[-1]
         
-        if last>=first:
-            return [i for i in range(first,last+1)]
+        if first <= last:
+            return [i for i in range(first, last+1)]
         else:
-            rec = []
+            res = []
+            
             for i in range(n):
-                if i+1<=last or i+1>=first:
-                    rec.append(i+1)
-            return sorted(rec)
+                if i+ 1 <= last or i + 1 >= first:
+                    res.append(i+1)
+            return sorted(res)

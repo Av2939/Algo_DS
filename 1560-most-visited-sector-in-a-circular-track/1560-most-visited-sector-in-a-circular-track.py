@@ -5,10 +5,14 @@ class Solution:
         
         if first <= last:
             return [i for i in range(first, last+1)]
+        
         else:
+            
             res = []
             
             for i in range(n):
-                if i+ 1 <= last or i + 1 >= first:
+                
+                if i+1 <= last or i+1 >= first:
                     res.append(i+1)
+                    
             return sorted(res)

@@ -1,8 +1,7 @@
 class Solution:
     def findShortestSubArray(self, nums: List[int]) -> int:
-        
         left = {}
-        right= {}
+        right = {}
         count = {}
         
         for i, x in enumerate(nums):
@@ -13,13 +12,12 @@ class Solution:
             right[x] = i
             count[x] = 1 + count.get(x, 0)
             
-        
         ans = len(nums)
         degree = max(count.values())
         
         for x in count:
             
-            if count[x] == degree:
+            if degree == count[x]:
                 ans = min(ans, right[x] - left[x] + 1)
-        
         return ans
+                

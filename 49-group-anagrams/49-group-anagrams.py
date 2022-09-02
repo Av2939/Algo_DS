@@ -3,6 +3,6 @@ class Solution:
         res = collections.defaultdict(list)
         
         for s in strs:
-            res[tuple(sorted(s))].append(s)
+            res[str(sorted(s))].append(s)
             
         return res.values()

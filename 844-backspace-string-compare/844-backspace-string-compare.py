@@ -12,5 +12,6 @@ class Solution:
                     
             return "".join(res)
         
-        
+        print(helper(s))
+        print(helper(t))
         return helper(s) == helper(t)

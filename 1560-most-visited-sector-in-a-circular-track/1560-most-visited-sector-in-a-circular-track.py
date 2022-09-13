@@ -1,17 +1,21 @@
 class Solution:
     def mostVisited(self, n: int, rounds: List[int]) -> List[int]:
-        first = rounds[0]
-        last = rounds[-1]
         
-        if first <= last:
-            return [i for i in range(first, last+1)]
+        
+        start = rounds[0]
+        end = rounds[-1]
+        
+        
+        if start <= end:
+            return [i for i in range(start, end+1)]
         
         else:
             
             res = []
             
             for i in range(n):
-                if i + 1 <= last or i + 1 >= first:
+                
+                if i + 1 <= end or i + 1 >= start:
                     res.append(i+1)
                     
-            return sorted(res)
+            return res

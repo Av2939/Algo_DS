@@ -4,24 +4,25 @@
  * @return {boolean}
  */
 var isAnagram = function(s, t) {
-    if (s.length != t.length){
-        return false
+    
+    if(s.length !== t.length){
+        return false;
     }
     
     let sMap = {}
     let tMap = {}
     
-    for (let i = 0; i < s.length; i ++ ){
+    for (let i = 0; i < s.length; i++){
         
         if (sMap.hasOwnProperty(s[i])){
             sMap[s[i]]++;
-        }else{
+        } else{
             sMap[s[i]] = 1;
         }
         
         if (tMap.hasOwnProperty(t[i])){
             tMap[t[i]]++;
-        }else{
+        } else {
             tMap[t[i]] = 1;
         }
         
@@ -31,12 +32,9 @@ var isAnagram = function(s, t) {
         if (sMap[k] !== tMap[k]){
             return false;
         }
+        
     }
-    return true;
-    
-    
-    
-    
+    return true
     
     
 };

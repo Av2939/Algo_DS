@@ -10,7 +10,7 @@ class Solution(object):
         :type list2: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
-        prehead = ListNode(-1)
+        prehead = ListNode()
         
         prev = prehead
         

@@ -11,16 +11,17 @@ class Solution(object):
         :rtype: bool
         """
         
-        def rec(node):
+        def dfs(node):
+            
             if node is None:
                 return [True, 0]
             
-            left = rec(node.left)
-            right = rec(node.right)
-            
+            left = dfs(node.left)
+            right = dfs(node.right)
             
             balanced = left[0] and right[0] and abs(left[1] - right[1]) <= 1
             
-            return (balanced, 1 + max(left[1], right[1]))
+            return [balanced, 1 + max(left[1], right[1])]
         
-        return rec(root)[0]
+        
+        return dfs(root)[0]

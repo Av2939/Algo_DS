@@ -18,10 +18,9 @@ class Solution(object):
         
         while curr:
             
-            if p.val < curr.val and q.val < curr.val:
+            if q.val < curr.val and p.val < curr.val:
                 curr = curr.left
-            elif p.val > curr.val and q.val > curr.val:
+            elif q.val > curr.val and p.val > curr.val:
                 curr = curr.right
             else:
                 return curr
-            

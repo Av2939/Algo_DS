@@ -4,7 +4,6 @@ class TrieNode:
         self.endOfWord = False
         
 
-
 class Trie(object):
 
     def __init__(self):
@@ -15,11 +14,9 @@ class Trie(object):
         :type word: str
         :rtype: None
         """
-        
         curr = self.root
         
         for c in word:
-            
             if c not in curr.children:
                 curr.children[c] = TrieNode()
             curr = curr.children[c]
@@ -33,26 +30,27 @@ class Trie(object):
         """
         curr = self.root
         
-        
         for c in word:
             if c not in curr.children:
                 return False
+            
             curr = curr.children[c]
         return curr.endOfWord
-            
+        
 
     def startsWith(self, prefix):
         """
         :type prefix: str
         :rtype: bool
         """
+        
         curr = self.root
         
         for c in prefix:
             if c not in curr.children:
                 return False
-            
             curr = curr.children[c]
+        
         return True
 
 

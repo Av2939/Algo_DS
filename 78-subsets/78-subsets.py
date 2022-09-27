@@ -5,9 +5,19 @@ class Solution(object):
         :rtype: List[List[int]]
         """
         
-        res = [[]]
+        res = []
         
-        for num in nums:
+        def backtracking(first = 0, curr = []):
             
-            res += [[num] + i for i in res]
+            if len(curr) == k:
+                res.append(curr[:])
+                
+            for i in range(first, len(nums)):
+                curr.append(nums[i])
+                backtracking(i+1, curr)
+                curr.pop()
+            
+        for k in range(len(nums)+1):
+            backtracking()
+        
         return res

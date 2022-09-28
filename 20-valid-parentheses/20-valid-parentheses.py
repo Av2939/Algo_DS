@@ -4,20 +4,18 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        stack = []
-        Map = {"}":"{", "]":"[", ")":"("}
         
+        Mapping = {")":"(", "]":"[", "}":"{"}
+        stack = []
         
         for c in s:
-            
-            if c in Map:
-                
-                if stack and stack[-1] == Map[c]:
-                    stack.pop()
-                else:
-                    return False
-            else:
+            if c not in Mapping:
                 stack.append(c)
-                
-        return not stack
+                continue
+            
+            if not stack or stack[-1] != Mapping[c]:
+                return False
+            stack.pop()
         
+        return not stack
+                

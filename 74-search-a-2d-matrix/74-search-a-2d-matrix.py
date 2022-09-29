@@ -21,8 +21,7 @@ class Solution(object):
                 down = row -1
             else:
                 break
-        if not (top <= down):
-            return False     
+         
         
         row = (top+down)//2
         l,r = 0, cols-1

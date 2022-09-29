@@ -7,32 +7,30 @@ class Solution(object):
         """
         rows, cols = len(matrix), len(matrix[0])
         
-        top, down = 0, rows-1
+        top, bot = 0, rows-1
         
-        
-        while top <= down:
-            
-            row = (top + down)//2
+        while top <= bot:
+            row = (top+bot)//2
             
             if target > matrix[row][-1]:
                 top = row + 1
-            
             elif target < matrix[row][0]:
-                down = row -1
+                bot = row -1
             else:
                 break
-         
         
-        row = (top+down)//2
+        
+        row = (top+bot)//2
         l,r = 0, cols-1
         
         while l <= r:
-            m = (l+r)//2
             
-            if target < matrix[row][m]:
-                r = m - 1
-            elif target > matrix[row][m]:
-                l = m + 1
+            mid = (l+r)//2
+            if target > matrix[row][mid]:
+                l = mid + 1
+            
+            elif target < matrix[row][mid]:
+                r = mid -1
             else:
                 return True
         

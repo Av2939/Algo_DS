@@ -5,33 +5,45 @@ class Solution(object):
         :type target: int
         :rtype: bool
         """
+        
         rows, cols = len(matrix), len(matrix[0])
         
-        top, bot = 0, rows-1
+        bot, top = rows-1, 0
         
         while top <= bot:
-            row = (top+bot)//2
+            
+            row = (bot + top)//2
             
             if target > matrix[row][-1]:
                 top = row + 1
-            elif target < matrix[row][0]:
-                bot = row -1
+            
+            elif target < matrix[row][0]: 
+                bot = row -1 
+                
             else:
                 break
-        
+                
+        l, r = 0, cols-1
         
         row = (top+bot)//2
-        l,r = 0, cols-1
+        
         
         while l <= r:
-            
             mid = (l+r)//2
-            if target > matrix[row][mid]:
-                l = mid + 1
             
-            elif target < matrix[row][mid]:
+            if target < matrix[row][mid]:
                 r = mid -1
+            
+            elif target > matrix[row][mid]:
+                l = mid + 1
             else:
                 return True
+            
         
         return False
+                
+        
+        
+        
+        
+        

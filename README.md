@@ -1,2 +1,2 @@
 # Algo_DS
-Collection of LeetCode questions to ace the coding interview! - Created using [LeetHub](https://github.com/QasimWani/LeetHub)
+Collection of Data Structure and Algorithm Questions that I've answered through LeetCode. 
